@@ -10,36 +10,39 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff2B475E),
-      body: Column(
-        children: [
-          Image.asset('assets/images/scholar.png'),
-          Text(
-            'Scholar Chat',
-            style: TextStyle(
-                fontSize: 32, color: Colors.white, fontFamily: 'Pacifico'),
-          ),
-          Text(
-            'LOGIN',
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.white,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/scholar.png'),
+            Text(
+              'Scholar Chat',
+              style: TextStyle(
+                  fontSize: 32, color: Colors.white, fontFamily: 'Pacifico'),
             ),
-          ),
-          CustomTextField(
-            hintText: 'Email',
-          ),
-          CustomTextField(
-            hintText: 'Password',
-          ),
-          Container(
-            width: double.infinity,
-            height: 60,
-            child: Text('LOGIN'),
-            decoration:BoxDecoration(
-              color: Colors.white
+            Text(
+              'LOGIN',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+              ),
             ),
-          )
-        ],
+            CustomTextField(
+              hintText: 'Email',
+            ),
+            CustomTextField(
+              hintText: 'Password',
+            ),
+            Container(
+              width: double.infinity,
+              height: 60,
+              child: Center(child: Text('LOGIN')),
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(8)),
+            )
+          ],
+        ),
       ),
     );
   }
