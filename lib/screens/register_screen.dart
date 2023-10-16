@@ -3,8 +3,8 @@ import 'package:chat_app/components/customButton.dart';
 import 'package:chat_app/components/customTextField.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class Register extends StatelessWidget {
+  const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
               const Row(
                 children: [
                   Text(
-                    'Login',
+                    'SIGN UP',
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ],
@@ -35,21 +35,21 @@ class LoginPage extends StatelessWidget {
               CustomTextField(hint: 'Email'),
               CustomTextField(hint: 'Password'),
               CustomButton(
-                text: 'LOGIN',
+                text: 'REGISTER',
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'don\'nt have an acount',
+                    'Already have an account',
                     style: TextStyle(color: Colors.white),
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, 'register');
+                      Navigator.pushNamed(context, 'login');
                     },
                     child: Text(
-                      ' REGISTER',
+                      ' LOGIN',
                       style: TextStyle(color: Colors.amber),
                     ),
                   ),

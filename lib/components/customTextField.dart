@@ -2,22 +2,19 @@ import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
   CustomTextField({
-    this.hintText,
-    Key? key,
-  }) : super(key: key);
-  String? hintText;
+    this.hint,
+    super.key,
+  });
+  final String? hint;
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 10),
-      child: TextField(
-        decoration: InputDecoration(
-            hintText: hintText,
-            hintStyle: TextStyle(color: Colors.white),
-            enabledBorder:
-                OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-            border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.white))),
+    return TextField(
+      decoration: InputDecoration(
+        hintText: hint,
+        hintStyle: const TextStyle(color: Colors.white),
+        enabledBorder:
+            const OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
       ),
     );
   }
